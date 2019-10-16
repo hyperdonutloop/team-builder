@@ -8,40 +8,42 @@ const TeamForm = props => {
 
     });
 
+    const changeHandler = (event) => {
+        setForm({...form, [event.target.name]: event.target.value})
+        
+    }
+
     return (
         <form>
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">Name: </label>
             <input
             name="name"
             id="name"
             type="text"
             placeholder="name"
+            onChange={changeHandler}
             value={form.name}
             />
 
-<label htmlFor="email">Email</label>
+<label htmlFor="email">Email: </label>
             <input
             email="email"
             id="email"
             type="text"
             placeholder="email"
+            onChange={changeHandler}
             value={form.email}
             />
 
-<label htmlFor="role">Role</label>
+<label htmlFor="role">Role </label>
             <input
             role="role"
             id="role"
             type="text"
             placeholder="role"
+            onChange={changeHandler}
             value={form.role}
             />
-
-
-
-
-
-
 
         </form>
 
