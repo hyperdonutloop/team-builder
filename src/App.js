@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import './App.css';
 import TeamForm from "./Components/TeamForm";
-
+import Members from "./Components/Members";
 
 function App() {
-  const [member, setMember] = useState([
+
+  const [teamMembers, setTeamMembers] = useState([
+
+  
     {
       name: 'Ryan Renteria',
       email: 'ryan@superhuman.com',
@@ -22,14 +25,15 @@ function App() {
     name: 'Severus Snape',
     email: 'severus@superhuman.com',
     role: 'Sr. Engineer', 
-  }
+  },
+
+  
 
 ]);
 
   return (
     <div className="App">
-      <TeamForm />
-      
+     <Members membersList={teamMembers} />
     </div>
   );
 }

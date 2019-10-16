@@ -1,13 +1,15 @@
 import React, { useState } from "react";
+import Members from "./Members";
 
 const TeamForm = props => {
+
     const [form, setForm] = useState({
         name: "",
         email: "",
         role: "",
-
-    });
-
+      
+      });
+   
     const changeHandler = (event) => {
         setForm({...form, [event.target.name]: event.target.value})
         
@@ -16,7 +18,7 @@ const TeamForm = props => {
     const submitForm = event => {
         event.preventDefault();
         props.addNewMember(form);
-        setForm({name: "", email: "", role: "", })
+        setForm({name: "", email: "", role: ""})
     }
 
     return (
@@ -33,7 +35,7 @@ const TeamForm = props => {
 
 <label htmlFor="email">Email: </label>
             <input
-            email="email"
+            name="email"
             id="email"
             type="text"
             placeholder="email"
@@ -55,7 +57,7 @@ const TeamForm = props => {
 
         </form>
     );
-
+    
 
 }
 
