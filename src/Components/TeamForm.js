@@ -13,8 +13,14 @@ const TeamForm = props => {
         
     }
 
+    const submitForm = event => {
+        event.preventDefault();
+        props.addNewMember(form);
+        setForm({name: "", email: "", role: "", })
+    }
+
     return (
-        <form>
+        <form onSubmit={submitForm}>
             <label htmlFor="name">Name: </label>
             <input
             name="name"
@@ -45,11 +51,9 @@ const TeamForm = props => {
             value={form.role}
             />
 
+            <button type="submit">Add Member</button>
+
         </form>
-
-
-
-
     );
 
 
