@@ -31,10 +31,15 @@ function App() {
 
 ]);
 
+  const addNewMember = (person) => {
+    setTeamMembers([...teamMembers, person]);
+
+  }
+
   return (
     <div className="App">
      <Members membersList={teamMembers} />
-     <Form />
+     <Form addNewMember={addNewMember} />
     </div>
   );
 }

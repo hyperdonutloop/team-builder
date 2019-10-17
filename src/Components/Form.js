@@ -23,7 +23,7 @@ const TeamForm = props => {
 
     return (
         <div>
-            <form>
+            <form onSubmit={submitForm}>
                 <label htmlFor="name">Name: </label>
                 <input
                 name="name"
