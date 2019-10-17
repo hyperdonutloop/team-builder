@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-import TeamForm from "./Components/TeamForm";
 import Members from "./Components/Members";
 
 function App() {

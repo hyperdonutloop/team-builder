@@ -3,7 +3,7 @@ import Members from "./Members";
 
 const TeamForm = props => {
 
-    const [form, setForm] = useState({
+    const [team, setTeam] = useState({
         name: "",
         email: "",
         role: "",
